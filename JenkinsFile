@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your Git repository
+                git 'https://github.com/shubham6347/Shubz.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // This stage may be used for additional build steps if needed
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Copy the HTML file to the web server directory
+                sh 'cp index.html /var/www/html/'
+
+                // Additional steps for deploying to a web server or hosting platform
+                // You might use tools like rsync, scp, or deploy to upload files.
+
+                // Example: Deploying to GitHub Pages
+                // sh 'gh-pages -d /var/www/html/'
+
+                // Example: Deploying to AWS S3
+                // sh 'aws s3 sync . s3://your-s3-bucket'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Deployment successful!'
+        }
+        failure {
+            echo 'Deployment failed!'
+        }
+    }
+}
