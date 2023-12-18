@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Define the nodes
+node1="user@node1.example.com"
+node2="user@node2.example.com"
+
+# Function to create a folder in the home directory of a node
+create_folder() {
+    local node=$1
+    local folder_name=$2
+
+    ssh -i ~/.ssh/your_private_key $node "mkdir -p ~/$folder_name"
+    echo "Folder '$folder_name' created on $node"
+}
+
+# Function to create a symlink in the root directory of a node
+create_symlink() {
+    local node=$1
+    local folder_name=$2
+
+    ssh -i ~/.ssh/your_private_key $node "ln -s ~/$folder_name /$folder_name"
+    echo "Symlink '/$folder_name' created on $node"
+}
+
+# Main script
+
+# Folder name to create
+folder_name="chef_script_folder"
+
+# Create folder on node1
+create_folder $node1 $folder_name
+
+# Create folder on node2
+create_folder $node2 $folder_name
+
+# Create symlink in root directory on node1
+create_symlink $node1 $folder_name
+
+# Create symlink in root directory on node2
+create_symlink $node2 $folder_name
+
+echo "Chef script execution completed."
