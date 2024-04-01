@@ -2,42 +2,30 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('CI') {
             steps {
-                // Checkout your Git repository
-                git 'https://github.com/shubham6347/Shubz.git'
+                // Checkout code from GitHub
+                git 'https://github.com/your/repository.git'
+                
+                // Build Docker image
+                sh 'docker build -t your-image-name .'
+                
+                // Push image to Docker Hub
+                withCredentials([usernamePassword(credentialsId: 'your-dockerhub-credentials-id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                    sh 'docker push your-image-name'
+                }
             }
         }
-
-        stage('Build') {
+        stage('CD') {
             steps {
-                // This stage may be used for additional build steps if needed
+                // Pull latest image from Docker Hub
+                sh 'docker pull your-image-name'
+                
+                // Deploy to Kubernetes (using kubectl or Helm)
+                // Example using kubectl
+                sh 'kubectl apply -f your-kubernetes-manifest.yaml'
             }
-        }
-
-        stage('Deploy') {
-            steps {
-                // Copy the HTML file to the web server directory
-                sh 'cp index.html /var/www/html/'
-
-                // Additional steps for deploying to a web server or hosting platform
-                // You might use tools like rsync, scp, or deploy to upload files.
-
-                // Example: Deploying to GitHub Pages
-                // sh 'gh-pages -d /var/www/html/'
-
-                // Example: Deploying to AWS S3
-                // sh 'aws s3 sync . s3://your-s3-bucket'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Deployment successful!'
-        }
-        failure {
-            echo 'Deployment failed!'
         }
     }
 }
