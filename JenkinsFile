@@ -5,7 +5,7 @@ pipeline {
         stage('CI') {
             steps {
                 // Checkout code from GitHub
-                git 'https://github.com/your/repository.git'
+                git 'https://github.com/shubham6347/GuidedProject.git'
                 
                 // Build Docker image
                 sh 'docker build -t your-image-name .'
