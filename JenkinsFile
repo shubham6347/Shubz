@@ -12,19 +12,9 @@ pipeline {
                 
                 // Push image to Docker Hub
                 withCredentials([usernamePassword(credentialsId: 'f220ce06-94b9-4851-82d8-87ba30c03c3f', usernameVariable: 'shubham6384', passwordVariable: 'Shubham@12')]) {
-                    sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
+                    sh 'docker login -u $shubham6384 -p $Shubham@12'
                     sh 'docker push guided_project'
                 }
-            }
-        }
-        stage('CD') {
-            steps {
-                // Pull latest image from Docker Hub
-                sh 'docker pull guided_project'
-                
-                // Deploy to Kubernetes (using kubectl or Helm)
-                // Example using kubectl
-                sh 'kubectl apply -f your-kubernetes-manifest.yaml'
             }
         }
     }
