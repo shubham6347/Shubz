@@ -8,19 +8,19 @@ pipeline {
                 git 'https://github.com/shubham6347/GuidedProject.git'
                 
                 // Build Docker image
-                sh 'docker build -t your-image-name .'
+                sh 'docker build -t guided_project .'
                 
                 // Push image to Docker Hub
-                withCredentials([usernamePassword(credentialsId: 'your-dockerhub-credentials-id', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                withCredentials([usernamePassword(credentialsId: 'your-dockerhub-credentials-id', usernameVariable: 'shubham6384', passwordVariable: 'Shubham@12')]) {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
-                    sh 'docker push your-image-name'
+                    sh 'docker push guided_project'
                 }
             }
         }
         stage('CD') {
             steps {
                 // Pull latest image from Docker Hub
-                sh 'docker pull your-image-name'
+                sh 'docker pull guided_project'
                 
                 // Deploy to Kubernetes (using kubectl or Helm)
                 // Example using kubectl
