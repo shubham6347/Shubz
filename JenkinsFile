@@ -11,7 +11,7 @@ pipeline {
                 sh 'docker build -t guided_project .'
                 
                 // Push image to Docker Hub
-                withCredentials([usernamePassword(credentialsId: 'your-dockerhub-credentials-id', usernameVariable: 'shubham6384', passwordVariable: 'Shubham@12')]) {
+                withCredentials([usernamePassword(credentialsId: 'f220ce06-94b9-4851-82d8-87ba30c03c3f', usernameVariable: 'shubham6384', passwordVariable: 'Shubham@12')]) {
                     sh 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
                     sh 'docker push guided_project'
                 }
