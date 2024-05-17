@@ -1,21 +1,31 @@
 pipeline {
     agent any
-
     stages {
-        stage('CI') {
+        stage("Git Checkout") {
             steps {
-                // Checkout code from GitHub
-                git 'https://github.com/shubham6347/GuidedProject.git'
-                
-                // Build Docker image
-                sh 'docker build -t guided_project .'
-                
-                // Push image to Docker Hub
-                withCredentials([usernamePassword(credentialsId: 'f220ce06-94b9-4851-82d8-87ba30c03c3f', usernameVariable: 'shubham6384', passwordVariable: 'Shubham@12')]) {
-                    sh 'docker login -u $shubham6384 -p $Shubham@12'
-                    sh 'docker push guided_project'
-                }
+                git branch: 'main', credentialsId: '6f889412-ec96-4a71-9aac-f0aebbe5e24c', url: 'https://github.com/shubham6347/Shubz'
             }
+        }
+        stage("Build Docker Image") {
+            steps {
+                sh "docker build -t html-server ."
+            }
+        }
+        stage("Run Docker Container") {
+            steps {
+                sh "docker run -d -p 8000:8000 --name html-container html-server"
+            }
+        }
+        stage("Verify Container") {
+            steps {
+                sh "docker ps | grep html-container"
+            }
+        }
+    }
+    post {
+        always {
+            sh "docker stop html-container"
+            sh "docker rm html-container"
         }
     }
 }
