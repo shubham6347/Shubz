@@ -4,11 +4,8 @@ FROM nginx:alpine
 # Remove the default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy the current directory contents into the nginx web root
-COPY . /usr/share/nginx/html
-
-# Set the correct permissions for nginx to access the files
-RUN chmod -R 755 /usr/share/nginx/html
+# Copy the contents of the GuidedPro directory into the nginx web root
+COPY GuidedPro /usr/share/nginx/html
 
 # Expose port 80 to the outside world
 EXPOSE 80
