@@ -22,10 +22,5 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            sh "docker stop html-container"
-            sh "docker rm html-container"
-        }
-    }
+    
 }
