@@ -4,7 +4,7 @@ FROM python:3
 WORKDIR /app
 
 # Copy the HTML file from the build context into the container
-COPY Namecode.html /app
+COPY Namecode.html /app/index.html
 
 # Expose port 8000 to the outside world
 EXPOSE 8000
