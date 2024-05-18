@@ -5,7 +5,7 @@ FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 
 # Copy the current directory contents into the nginx web root
-COPY . /usr/share/nginx/html
+COPY GuidedPro/ /usr/share/nginx/html
 
 # Expose port 80 to the outside world
 EXPOSE 80
