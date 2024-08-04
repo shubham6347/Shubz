@@ -1,8 +1,7 @@
 # Configure the AWS Provider
 provider "aws" {
   region     = "ap-south-1"
-  access_key = ""  # Replace with your access key
-  secret_key = ""  # Replace with your secret key
+  
 }
 
 # Create an IAM Role
