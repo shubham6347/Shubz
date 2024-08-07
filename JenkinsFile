@@ -29,6 +29,7 @@ pipeline {
                 success {
                     script {
                         INSTANCE_IP = sh(script: 'cd terraform && terraform output -raw instance_ip', returnStdout: true).trim()
+                        env.INSTANCE_IP = INSTANCE_IP // Update the environment variable
                     }
                 }
             }
