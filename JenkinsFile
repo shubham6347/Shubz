@@ -3,7 +3,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'shubham6384/shubhz'
         DOCKER_TAG = 'latest'
-        SSH_KEY = 'path/to/your/ssh-key.pem' // Update with your actual SSH key path
+        SSH_KEY = "C:\Users\Shubham\OneDrive\Desktop\learnpython\AWS\newjenkins.pem" // Update with your actual SSH key path
         INSTANCE_IP = '' // This will be updated dynamically
     }
     stages {
@@ -28,8 +28,7 @@ pipeline {
             post {
                 success {
                     script {
-                        INSTANCE_IP = sh(script: 'cd terraform && terraform output -raw instance_ip', returnStdout: true).trim()
-                        env.INSTANCE_IP = INSTANCE_IP // Update the environment variable
+                        INSTANCE_IP = sh(script: 'terraform output -raw instance_ip', returnStdout: true).trim()
                     }
                 }
             }
