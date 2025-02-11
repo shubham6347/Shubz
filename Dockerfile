@@ -4,8 +4,10 @@ FROM nginx:alpine
 # Remove the default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
+WORKDIR /usr/share/nginx/html
+
 # Copy the current directory contents into the nginx web root
-COPY GuidedPro/ /usr/share/nginx/html
+COPY GuidedPro/ 
 
 # Expose port 80 to the outside world
 EXPOSE 80
