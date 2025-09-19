@@ -1,0 +1,113 @@
+-------------
+
+61. What is Vault by HashiCorp?
+
+Answer:
+Vault is a tool for securely storing and accessing secrets such as API keys, passwords, and certificates.
+
+62. What is AWS Secrets Manager?
+
+Answer:
+A fully managed service for securely storing, rotating, and retrieving secrets like database credentials and API keys.
+
+63. Difference between AWS Secrets Manager and Parameter Store?
+
+Answer:
+
+Secrets Manager: For sensitive data, supports automatic rotation, costs extra.
+
+SSM Parameter Store: Stores both plain text and secrets, basic version is free.
+
+64. What is AWS SQS?
+
+Answer:
+Amazon Simple Queue Service is a fully managed message queuing service for decoupling and scaling microservices.
+
+65. What is AWS SNS?
+
+Answer:
+Amazon Simple Notification Service is a pub/sub messaging service for sending messages to multiple subscribers.
+
+66. Difference between SQS and SNS?
+
+Answer:
+
+SQS: Point-to-point, message queue.
+
+SNS: Publish/subscribe, broadcasts messages to many.
+
+67. What is AWS Lambda?
+
+Answer:
+AWS Lambda is a serverless compute service that runs code in response to events without managing servers.
+
+68. What languages does AWS Lambda support?
+
+Answer:
+Node.js, Python, Java, Go, Ruby, .NET, and custom runtimes.
+
+69. What is Step Functions in AWS?
+
+Answer:
+AWS Step Functions is a serverless workflow service that orchestrates multiple AWS services into serverless workflows.
+
+70. What is Amazon API Gateway?
+
+Answer:
+A fully managed service that allows you to create, publish, secure, and monitor APIs at scale.
+
+71. What is AWS CloudFormation?
+
+Answer:
+A service that allows you to model and provision AWS resources using templates written in JSON or YAML.
+
+72. What is AWS Elastic Beanstalk?
+
+Answer:
+A PaaS (Platform as a Service) that allows you to deploy and manage applications without managing the underlying infrastructure.
+
+73. What is AWS Auto Scaling?
+
+Answer:
+Auto Scaling automatically adjusts the number of EC2 instances in response to demand to maintain performance and reduce costs.
+
+74. What is Amazon CloudFront?
+
+Answer:
+CloudFront is a Content Delivery Network (CDN) that delivers data, videos, applications, and APIs to users globally with low latency.
+
+75. What is AWS WAF?
+
+Answer:
+Web Application Firewall that protects web applications from common attacks like SQL injection and XSS.
+
+76. What is AWS Shield?
+
+Answer:
+A managed DDoS protection service.
+
+Standard: Free, protects against common DDoS attacks.
+
+Advanced: Paid, provides enhanced DDoS mitigation.
+
+77. What is AWS GuardDuty?
+
+Answer:
+A threat detection service that continuously monitors for malicious activity and unauthorized behavior.
+
+78. What is AWS Inspector?
+
+Answer:
+Amazon Inspector automatically assesses applications for vulnerabilities and deviations from best practices.
+
+79. What is AWS Config?
+
+Answer:
+A service that tracks AWS resource configurations and compliance over time.
+
+80. What is AWS Trusted Advisor?
+
+Answer:
+An online tool that provides real-time guidance on best practices for AWS resources in areas like cost optimization, security, and performance.
+
+------------------
