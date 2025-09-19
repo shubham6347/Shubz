@@ -1,0 +1,328 @@
+==========
+Infosys 
+==========
+Jenkins CI CD 
+Jenkins CI CD stages 
+How pipeline trigger automatically 
+How the flow of u r CI CD 
+What are the env are there 
+I want to know the entire flow from dev to QA to preprod to prod 
+What are issues u have faced while working on Jenkins
+If Jenkins pipeline fails in build stage how you will trouble shoot?
+Maven repo related scenarios questions?
+
+Docker 
+
+What Dockerfile
+How do you write Dockerfile? 
+What type of apps are there ?
+How do you build an image?
+If I have not mentioned cmd and entry point will it run docker file ?
+
+Kubernetes
+
+What is kubernetes?
+What is deployment?
+What is the difference between service and ingress?
+What is the difference between configmap and secrets?
+How you will expose application on kubernetes?
+What is pod ?
+If we can store two containers in pod then what is use of second container?
+
+Helm 
+
+What is helm?
+If I deployed application using helm version 1 and now I deploying new version that is helm 2 there is an issue with helm version 2 how will you solve this?
+
+
+==============
+inferyx
+==============
+1. Write a Jenkins declarative pipeline to build a Maven project, run tests, and deploy if the tests pass.
+2. Write a Bash script to check CPU utilization on a Linux server and send an email if it exceeds 80%.
+3. Write a Terraform configuration to provision an EC2 instance in a specific VPC and subnet, and attach a security group that allows SSH access.
+4. Write an Ansible playbook to:
+Install Nginx on Ubuntu.
+Start and enable the Nginx service.
+Copy a custom index.html file to /var/www/html.
+5. Create a Dockerfile for a Spring Boot app that:
+Uses OpenJDK 17.
+Copies the target/*.jar into the image.
+Exposes port 8080.
+Uses ENTRYPOINT to run the app.
+6. Write a Python script that:
+Lists all EC2 instances in a given region.
+Filters instances by running state.
+Prints instance ID, type, and public IP.
+7. Write a simple CloudFormation template to:
+Create a VPC with one public subnet.
+Launch an EC2 instance in the subnet.
+Add outputs for the subnet ID and instance ID.
+
+==============
+Amdocs
+==============   
+Intro , roles and resposibilities what r doing for your org u r contribution ?
+Ok now what the isuue solved recently in ur org how you fixed whats the conclusion u got ?
+architecture of k8s ?
+what is orchestation ?
+what r the things u have worked on terraform?
+what is count function in terraform?
+any other way to do it like in looping ?
+write trafform code for ec2 and provider as well?
+lets take there 20 resources created and i want destroy only one resource how can do it ?
+what is saas paas IAAS ?
+could u explain the entire flow of your ci cd pipleine ?
+where dev write the code how he will commit it then how pipline trigger like i want to know which branch he will commit the how he will commt te and jenkins pipeline runs ?
+
+==============
+TSYS
+==============
+*** Round 1 ***
+How prometheus sending those logs to kibana ?
+is prometheus sending those logs to grafana of grafana taking it? 
+lets take u r creating dashbord in grfana how graphana knows that is metric in promethus how he knows that he has take logs from that. 
+lets take only cpu or memory realted data how kibana knows that he has take data from that.
+Let's say. I nave deployed API in Kubernetes. And it is running database. Okay. so, What are all the components that are needed? F actively. Serve the request that is coming from outside lines
+The API is running. The API is running in a Kubernetes cluster in a place.
+Okay, so I am a client. I'm coming to you. I need To access that APA. Okay. So, you need to configure. Multiple things. For that. So that I will be able to access it because they is currently running in the AWS. That is a private. Your private VPC. I am a public user, I need to access it. So what are all the
+So what are all the components that are needed that you need to configure? So that I will be A able to access your API.
+A load balancer. You have created in that is AWS component. In Kubernetes You have created the increase of created the service
+okay, so now you have created a service load balancer service When you create a Load Balancer service. So what will be created in the AWS side? There will be a lot.
+Okay. Now let's say you have created a, what kind of Like in Route, 53 water. All the things, you will provide for that.
+Okay. So, in DNS. so, In a Linux machine. Let's say you have a instance created. And you need that instance to use a particular DNS. So, how you will configure that?
+yeah, there is a DNS server, let's say, you have you are hosting a DNS and you have a different DNS server and you have you need your PC to instance, to use your DNS server. How you will be able to achieve that? 
+Okay, you have DNS server. You have created a DNS server. Okay, and you have created a easy to instance. That is a Linux instance: 80 you want your Linux instance to use the DNS server that you have created? For the name resolution. So, how you will achieve that?
+Okay. Let's say you need to find a particular file. In a directory. How do you do that? What is the command?
+So, how you will be able to filter out a single line? Using our command
+If you put dollar one, Will it print? First. Line, or first column.
+which is commnd to give as a single line out put from file
+there are two files which contains 150 lines in one file and other file contain 200 lines how will find out that 50 different lines which not in file 1
+What is xarg command do?
+
+*** Round 2 ***
+Kubectl and kubeproxy is created by yaml files or not how its created then?
+Diff demonset and deployement ?
+You means deployment can be created by ns but not demonset ?
+Python code a = [12, 666, 78, 90, 1, 5, 197] fetch only two degit num from this with the help of array ?
+Types of load balacers ?
+Diff ALB and NLB when to use ALB when to NLB ?
+You are DB application is in private sub how will you expose it to internet so he can talk with internet but request can not be comes from interet to db ? 
+
+===========
+Deepintent
+===========
+Day to Day activities & roles and resposibilities ?
+Which k8s cluster version you folks are using and what is the size of worker nodes u folks are using ?
+If i want to deploy a new microservice on kubernetes cluster how can do that ?
+Lets take there are existing applications and user wants to access that application but its getting 503 error how you will solve this error ?
+What is 503 error ?
+
+===========
+RapiPay
+===========
+*** 1st Round ***
+K8s rbac deployement statefulset pv pvc 
+Docker best practices `
+AWS three tier architecture 
+Jenkins
+Terraform
+
+*** 2nd Round ***
+How will you deploy microservices via jenkins ci cd
+write jenkins file
+how you will rollback in jenkins
+Let's take there are three services that is loadbalacer -> 1.txt 2.ums 3.report now i have created same loadbalacer -> 1.txt 2.ums 3. report 1.txt 2.ums 3.report second one 
+is new version i want to create a pipeline for that new version could you tell me how you will write jenkinsfile for this 
+securely configuration related to ec2 or s3
+s3 types 
+s3 lifecycle 
+sql query
+RDS
+lamda 
+how you will create user in RDS 
+
+===========
+Trigyn
+===========
+CI CD end to each and every stage also workflow from dev to qa to pre-prod to production 
+dockerfile let's take you got info from dev like this is code and now you want to create dockerfile which things will you consider while creating a dockerfile 
+he is not asking best practises
+what is ns in k8s
+git and github diff
+git head
+git conflicts how you fix it 
+
+===========
+country delight
+===========
+
+If piplene is failing checkout stage how will you fix it ?
+What are the issues u have faced in sonar stages ?
+Have you created any user like in sonar these types of questions ?
+There is a account a which contain ec2 and there is an account b which contain rds i want to connect it to ec2 in account a can we do that if yes then how if no then why?
+NACL vs SG
+Let's take in your elk cluster if your cluster is down which is not accessible and there you cant see dashbord how to do make sure to elk service will available ?
+Port of elasticserach ?
+
+
+===========
+AgiliDEA
+===========
+
+1. What is overlay networking in docker?
+2. okay so in conatiner i want to access the data outside container a conatiner is running runtime has to accept some data outside so what configuration will you do in dockerfile?
+one gUId of conatiner needs to be used by second guid of second conatiner so what would be the docker file for second conatiner to accept guid of fisrt conatiner 
+3. what are docker bind mounts?
+4. so why this mind mounts are used ?
+5. so what case u use bind mont and what case u use presistent i.e default volume ?
+6. when do yo do  docker pause what it will happen ?
+6. so suppose there are two ns customer this exposed and admin that is not exposed not have access to customer but second ns has need to access to first so waht configuration 
+   will u do?
+7. where will you create a role ? 
+8. where will you create service account ?
+9. have you ever managed psss in dcker yes how to do that? 
+10. other than ci cd what can be done in jenkins ?
+11. You have aws accound someone give you secrete acceess keys now there is an requirement u need to create ec2 instace whose name is instance one and region is ohio now you 
+    have to create ec2 instace via tf file how will u do it ?
+
+===========
+Royal Cyber
+===========
+
+1.What r the types of volumes in docker ?
+2.Difference betn persistent and mount bind volume in docker?
+4.How will you push image to docker regisry from kubernetes cluster?
+5.I am asking the mirror image 
+3.How take back image that we recently lost? docker commit
+4.In EBS what is the size oF block 10 gb of ebs volume?
+5.Algorithm behind load balancer?
+
+6.If there are 5 master node and 10 worker node is running and due to some issue 3 goes down could you tell me my k8s cluster will run of not?
+7.How will you upgrade k8s cluster ?
+8.Now lets take there is new user which is recently joined whose name is soham and i want to create that user and also i want create a role for him how can i do that?
+9.which one is stable version in kubernetes?
+10.k8s architecture?
+11.In kubernetes how will you expose your application to external world so user can access it?
+12.what is labels and selector?
+
+13.How you can create a kubernetes cluster I am asking on on primise ?
+14.In docker i have store the logs which is /var/etc/etc/dockerlog & because some issue if /etc2 folder is not working and you need make sure that this will not 
+how will you do that like which you will change the loaction or like that type question could you gue which question he trying to asking ?
+ANS***** 
+
+======
+CGI:
+====== 
+In linux I want to install a package by using sudo apt get install but its showing package not found how to do it ? apt get update -- apt-cache search <package_name>  
+lets take example i want to scale my nginx conatiner in docker how can i achieve that ? 
+docker swarm init -- docker service create --name nginx-service --replicas 1 -p 80:80 nginx -- docker service scale nginx-service=3
+
+
+======
+One2N:
+====== 
+
+CI CD is different in ur project ?
+Did you do only one time jar file in maven in ci cd also you are doing it docker file ?
+How services wil communicate ? talk with each other in kubernetes ?
+Could you tell me end to end setup for kubernetes cluster for ELK from scratch how its things works and how to implement?
+In eks cluster How will you know that this the authentication is valid user ?
+How to check port of services running in linux ?
+what is the difference between demonset and replicaset ?
+how will you set up elk from scratch for kubernetes nodes ?
+How you setup basic setup for kibana using deployement file ? 
+workflow of ELK ?
+
+=========
+Deloitte:
+=========
+1. Could you give an introduction yourself and your daily activities as a DevOps engineer?
+2. In Terraform, I’ve created a database with sensitive information like a password, and I don't want it to appear in the output. How can I do that?
+3. Which parameter do I need to pass in Terraform to avoid displaying sensitive information like a password in the output ?
+4. In a Dockerfile, which user performs what action, and how can I specify the user ?
+5. What are the different networking types in Docker ?
+6. What is the difference between a bridge network and an overlay network in Docker ?
+7. How does a user access an application deployed in a Kubernetes cluster? What is the process ?
+8. Let’s say there’s an application deployed in AWS, and we want it to be highly available. How can we achieve high availability ?
+9. In Terraform, there is a database password in my configuration. How can I ensure that the password does not appear in the output ? Which parameter should I use?
+10. What is the difference between SLO (Service Level Objective) and SLA (Service Level Agreement) ?
+11. What is the difference between PV (Persistent Volume) and PVC (Persistent Volume Claim) ?
+12. Explain the Kubernetes architecture used in your project.
+13. Are you using stateful or stateless applications in your project ?
+14. What is a StatefulSet in Kubernetes ?
+15. Scenario-based questions related to PVC (Persistent Volume Claim) and PV (Persistent Volume).
+16. How is a Persistent Volume (PV) created in Kubernetes?
+17. What is a Persistent Volume (PV)?
+18. What is the difference between a Persistent Volume (PV) and a Persistent Volume Claim (PVC) ?
+19. How do you map ports in a Dockerfile ?
+20. If there is one port 80 and another port 8000, how do you map them in Docker ?
+21. What are the different services in Kubernetes, and which services have you worked on ?
+22. Which ingress controller are you using in your project?
+23. What is the difference between a rollback, a canary deployment, and a blue-green deployment in Kubernetes ?
+24. Scenario-based questions related to deployments in Kubernetes.
+25. Let’s take a scenario: I am creating an EC2 instance and attaching it to a VPC. How can I ensure the VPC is created first and then the EC2 instance?
+26. How do you ensure that a VPC is created before an EC2 instance in AWS using Terraform ?  
+27. What is Ansible, and why do we use it ?
+
+===========  
+Broadridge:
+=========== 
+
+What is CI ?
+Why we use jenkins If we can do everything on local ? 
+Let's takes example I have installed application in EC2 instance how you forward the log to the cloud watch ?
+Write replicaset manifest files ?
+Write a python programme which retrives ebs volume from AWS ?
+How to take backup of EC2 instance through automation ?
+write manifest file for replicaset take replicaset number as 5 ? 
+Replicaset and Deployment diff ?
+How to send image to ECR on specific repository ? ---> docker push <account-id>.dkr.ecr.<region>.(link unavailable)<repository-name>:<image-tag>
+End to end flow of EFK ?
+Could tell me if I want install fluentbit on Kubernetes Cluster how can you do it ?
+What are jenkins plugins you are using in your projects ?
+What is plugins ?
+Write a script to reverse the string ?
+Write a Python script to find concurrency in mentioned array (this is soham) ?
+Write a Python script to find out large number from a list ( list = [12,14,16,18] ) ?
+
+================
+Maruti Tech Labs
+================
+
+Docker I want to run docker image how will you that which os will it run on like windows or linux 
+docker networking types
+two containers are running on default networking can they talk with each other ?
+
+vpc end points ?
+RDS 
+cloudfront - 
+route53 - policy types and how we check health check ?
+Let's take there is an person who created pods in kubernetes without creating deployment files and labels and now you want check it its created by default lables now 
+Want change label how can you do that ? 
+kubectl get pod <pod-name> --show-labels
+kubectl label pod <pod-name> <label-key>=<label-value> --overwrite
+kubectl label pod my-pod environment=production --overwrite
+If let's take example there two application which deployed i.e two pods running on two differenet nodes in two different nodes now I want drain out 2 pods on one node that pods 
+and want to run it on single node  how can I do that ?
+There are different env like dev and staging there are modules of each resource if i want run my ec2 with duplication on terraform shall i do that?
+What is null resource in terraform ?
+
+========== 
+Cloudraft
+==========
+
+How you store sectrets in kubenernetes like in sectret manager let's take you have created secrets how argocd knows that the particular 
+secret is not synceed means thats not be pushed. 
+
+==========
+==========
+
+I  have deployed my application on ec2 instance and it's giving me 500 when user trying acces it via url name 
+
+Docker
+cmd and entrypoint
+how you check the health of docker container have created mysql data base application by using statefulset now coz of some out of 4 1 pod is in crashloop backoff error now my question is 
+if the pod state changed from crashloop backoff to ready state will it change the name of pod like earlie was mysql-001 
+terraform there is an ebs there are different env dev env and staging env now i am doing terraform plan but changing the tag of that ebs how will you fix it 
+I want to know the the ip of my mysql container without running exec command in docker as well in k8s
