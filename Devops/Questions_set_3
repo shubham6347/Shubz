@@ -1,0 +1,115 @@
+------
+
+41. What is a Kubernetes DaemonSet?
+
+Answer:
+A DaemonSet ensures that a copy of a specific pod runs on all (or selected) nodes in a Kubernetes cluster. Commonly used for log collectors, monitoring agents, etc.
+
+42. What is a Kubernetes StatefulSet?
+
+Answer:
+A StatefulSet is used for deploying stateful applications. It provides stable network IDs, persistent storage, and ordered deployment/termination. Example: Databases like MySQL, MongoDB.
+
+43. What is Ingress in Kubernetes?
+
+Answer:
+Ingress is an API object that manages external access to Kubernetes services, typically HTTP/HTTPS, using rules and load balancing.
+
+44. Difference between NodePort, ClusterIP, and LoadBalancer services in Kubernetes?
+
+Answer:
+
+ClusterIP: Default, accessible only inside the cluster.
+
+NodePort: Exposes service on each node’s IP at a static port.
+
+LoadBalancer: Creates an external load balancer to route traffic to the service.
+
+45. What is Service Mesh?
+
+Answer:
+A service mesh is an infrastructure layer that manages communication between microservices. Example: Istio, Linkerd. Provides features like observability, security, and traffic management.
+
+46. What is Prometheus?
+
+Answer:
+Prometheus is an open-source monitoring and alerting toolkit, optimized for time-series data.
+
+47. What is Grafana?
+
+Answer:
+Grafana is an open-source analytics and visualization tool used with Prometheus (or other data sources) to build dashboards.
+
+48. What is ELK Stack?
+
+Answer:
+ELK stands for Elasticsearch, Logstash, Kibana:
+
+Elasticsearch: Stores and searches logs
+
+Logstash: Collects and processes logs
+
+Kibana: Visualizes logs and metrics
+
+49. What is EFK Stack?
+
+Answer:
+EFK = Elasticsearch, Fluentd, Kibana. Fluentd replaces Logstash for lightweight log collection.
+
+50. What is Ansible?
+
+Answer:
+Ansible is an open-source automation tool for configuration management, application deployment, and orchestration. Uses YAML (playbooks).
+
+51. What is the difference between Ansible, Puppet, and Chef?
+
+Answer:
+
+Ansible: Agentless, uses SSH, YAML-based.
+
+Puppet & Chef: Require agents, more complex setup, use Ruby DSL.
+
+52. What is Jenkins?
+
+Answer:
+Jenkins is an open-source CI/CD automation server used for building, testing, and deploying applications.
+
+53. What are Jenkins Agents/Slaves?
+
+Answer:
+Agents (or slaves) are worker nodes that run build jobs, while the master node schedules jobs and coordinates execution.
+
+54. What is a Jenkinsfile?
+
+Answer:
+A Jenkinsfile is a text file that defines a Jenkins pipeline using Groovy syntax. It can be Declarative or Scripted.
+
+55. What are Shared Libraries in Jenkins?
+
+Answer:
+Reusable pipeline code (written in Groovy) stored in version control, which can be used across multiple Jenkins pipelines.
+
+56. What is SonarQube?
+
+Answer:
+SonarQube is a code quality and security analysis tool that detects bugs, vulnerabilities, and code smells.
+
+57. What is Nexus/Artifactory?
+
+Answer:
+They are artifact repositories used to store and manage build artifacts like JARs, WARs, Docker images, etc.
+
+58. What is GitOps?
+
+Answer:
+GitOps is a DevOps practice where Git is the single source of truth for infrastructure and application configurations. Changes are applied automatically via CI/CD.
+
+59. What is ArgoCD?
+
+Answer:
+ArgoCD is a declarative, GitOps-based continuous delivery tool for Kubernetes. It syncs the cluster state with Git repositories.
+
+60. What is Istio?
+
+Answer:
+Istio is a service mesh that provides traffic management, security, and observability for microservices running in Kubernetes.
