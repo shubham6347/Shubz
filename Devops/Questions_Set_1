@@ -1,0 +1,177 @@
+# AWS & DevOps Interview Questions and Answers
+
+### 1. What is AWS Fargate?
+
+**Answer:** AWS Fargate is a serverless compute engine for Amazon ECS and EKS. It allows you to run containers without managing EC2 instances. AWS provisions and manages the infrastructure automatically.
+
+---
+
+### 2. What is Amazon ECS?
+
+**Answer:** Amazon Elastic Container Service (ECS) is a fully managed container orchestration service that helps you deploy, manage, and scale Docker containers on AWS.
+
+---
+
+### 3. What are ACLs? What does enabled or disabled mean?
+
+**Answer:**
+
+* **ACL (Access Control List):** A set of rules that define permissions for users or groups on a system.
+* **Enabled:** ACLs are applied to resources.
+* **Disabled:** ACLs are ignored.
+
+---
+
+### 4. What is bucket versioning?
+
+**Answer:**
+
+* **Enabled:** Keeps multiple variants of an object in a bucket, allowing retrieval of every version.
+* **Suspended:** Stops creating new versions but retains old versions.
+* **Disabled:** Once enabled, it cannot be fully disabled—only suspended.
+
+---
+
+### 5. What is an AMI?
+
+**Answer:** An Amazon Machine Image (AMI) is a preconfigured virtual machine template used to launch EC2 instances.
+
+---
+
+### 6. What is the difference between EBS and S3?
+
+**Answer:**
+
+* **EBS (Elastic Block Store):** Like a virtual hard disk attached to servers. Low-latency, good for databases and frequent read/write apps. Max size: 16TB per volume.
+* **S3 (Simple Storage Service):** Object-based storage for storing files, backups, and static content.
+
+---
+
+### 7. What are Read Replicas in RDS?
+
+**Answer:** Read replicas are copies of the primary database that allow scaling of read-heavy workloads. You can create up to 5 read replicas in Amazon RDS.
+
+---
+
+### 8. What is Amazon Athena?
+
+**Answer:** A serverless query service that allows you to analyze data stored in Amazon S3 using SQL.
+
+---
+
+### 9. What is the difference between NAT Instance and NAT Gateway?
+
+**Answer:**
+
+* **NAT Gateway:** Fully managed by AWS, highly available, scales automatically.
+* **NAT Instance:** EC2 instance configured as a NAT. Requires manual management, less scalable.
+
+---
+
+### 10. What is AWS CloudTrail?
+
+**Answer:** AWS CloudTrail is a logging service that records API calls made within an AWS account.
+
+---
+
+### 11. If a Jenkins pipeline crashes, how do you fix it?
+
+**Answer:**
+
+* Open Jenkins dashboard → Select failed build.
+* Check console output for error messages.
+* Identify and fix the root cause (e.g., misconfiguration, dependency failure).
+
+---
+
+### 12. How do you troubleshoot a Linux server that is running out of space?
+
+**Answer:**
+
+1. Check disk space → `df -h`
+2. Identify large files → `du -sh /path/to/dir`
+3. Check logs → `ls -lh /var/log`
+4. Clear unnecessary files in `/var/log` and `/tmp`
+
+---
+
+### 13. How do you secure a Linux server?
+
+**Answer:**
+
+* Regularly update system (`yum update`, `apt-get update`)
+* Disable root login in `/etc/ssh/sshd_config`
+* Configure firewalls (`iptables`, `firewalld`)
+* Use SSH key-based authentication
+
+---
+
+### 14. A deployment failed in production. How do you troubleshoot?
+
+**Answer:**
+
+* Check application and deployment logs (e.g., Jenkins logs, `/var/log/`)
+* Identify issues (misconfiguration, missing dependencies, resource limits)
+* Rollback and revert to previous stable version
+
+---
+
+### 15. What is the difference between TCP and UDP?
+
+**Answer:**
+
+* **TCP:** Connection-oriented, reliable, ensures data delivery.
+* **UDP:** Connectionless, faster, less reliable, no guaranteed delivery.
+
+---
+
+### 16. What is a Proxy Server?
+
+**Answer:**
+
+* **Proxy Server:** Acts as intermediary between client and server.
+* **Reverse Proxy:** Forwards client requests to backend servers. Example: AWS ALB, API Gateway.
+
+---
+
+### 17. What is the difference between Process and Service?
+
+**Answer:**
+
+* **Process:** Running instance of a program, identified by a unique PID.
+* **Service:** Long-running background process that provides functionality (e.g., `sshd`).
+
+---
+
+### 18. What are some important Linux commands for DevOps?
+
+* `sudo usermod -aG docker $USER` → Add user to docker group
+* `ps aux` → Show active processes
+* `kill -9 <PID>` → Kill process by PID
+* `pkill <name>` → Kill process by name
+* `nohup <cmd> &` → Run process in background
+* `grep -i "error" /path/file.log` → Search for errors in file
+* `tar -xvzf backup.tar.gz` → Extract backup
+* `netstat -tuln` → Show listening ports
+* `curl -I https://google.com` → Fetch HTTP headers
+* `shutdown -h now` → Shutdown immediately
+* `rsync -av source/ backup/` → Sync files
+* `scp file.txt user@host:/path/` → Secure copy over SSH
+
+---
+
+### 19. What is Load Balancing vs Failover?
+
+**Answer:**
+
+* **Load Balancing:** Distributes traffic across multiple servers to optimize performance.
+* **Failover:** Switches to backup system when primary fails, ensuring high availability.
+
+---
+
+### 20. How can you encrypt data in AWS?
+
+**Answer:**
+
+* **At rest:** Use AWS KMS for encryption of data stored in S3, EBS, RDS.
+* **In transit:** Use TLS/SSL to protect data while moving across networks.
