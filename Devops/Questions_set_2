@@ -1,0 +1,131 @@
+---
+
+21. What is the difference between Monolithic and Microservices architecture?
+
+Answer:
+
+Monolithic: Single, tightly coupled application. Hard to scale and maintain.
+
+Microservices: Application broken into smaller, independent services. Easy to scale, deploy, and maintain.
+
+22. What is Blue-Green Deployment?
+
+Answer:
+Blue-Green Deployment is a strategy where you maintain two identical environments:
+
+Blue (current production)
+
+Green (new version)
+Traffic is switched to Green after testing, ensuring zero downtime.
+
+23. What is Canary Deployment?
+
+Answer:
+A deployment strategy where a new version is rolled out to a small subset of users first. If stable, it gradually expands to more users.
+
+24. What is Infrastructure as Code (IaC)?
+
+Answer:
+IaC is managing and provisioning infrastructure using code instead of manual processes. Examples: Terraform, AWS CloudFormation, Ansible.
+
+25. Difference between Terraform and CloudFormation?
+
+Answer:
+
+Terraform: Open-source, works with multiple clouds, declarative.
+
+CloudFormation: AWS-specific, tightly integrated with AWS services.
+
+26. What are the states in a Jenkins pipeline?
+
+Answer:
+
+Success → Green
+
+Unstable → Yellow
+
+Failure → Red
+
+Aborted → Gray
+
+27. What are Webhooks?
+
+Answer:
+Webhooks are HTTP callbacks triggered by events. For example, GitHub can trigger a Jenkins build when code is pushed.
+
+28. What is Continuous Integration (CI)?
+
+Answer:
+CI is the practice of frequently merging developer code changes into a shared repository, where automated builds and tests are run.
+
+29. What is Continuous Deployment (CD)?
+
+Answer:
+CD is the practice of automatically deploying code changes to production after passing automated tests.
+
+30. What is the difference between CI and CD?
+
+Answer:
+
+CI: Focuses on integrating code and running tests.
+
+CD: Focuses on automatically deploying changes to staging/production.
+
+31. What is Docker?
+
+Answer:
+Docker is a platform for developing, shipping, and running applications inside lightweight, portable containers.
+
+32. Difference between Docker Container and Virtual Machine?
+
+Answer:
+
+VM: Heavy, runs full OS with hypervisor, resource-intensive.
+
+Container: Lightweight, shares host OS kernel, faster startup, efficient.
+
+33. What is Docker Compose?
+
+Answer:
+A tool for defining and running multi-container Docker applications using a YAML configuration file.
+
+34. What is Kubernetes?
+
+Answer:
+Kubernetes (K8s) is an open-source container orchestration platform for deploying, scaling, and managing containerized applications.
+
+35. Difference between ReplicaSet and Deployment in Kubernetes?
+
+Answer:
+
+ReplicaSet: Ensures a specified number of pods are running.
+
+Deployment: Manages ReplicaSets and provides features like rolling updates and rollbacks.
+
+36. What is a Kubernetes Namespace?
+
+Answer:
+A logical partition within a Kubernetes cluster that isolates resources and policies.
+
+37. What is ConfigMap and Secret in Kubernetes?
+
+Answer:
+
+ConfigMap: Stores non-sensitive configuration data (e.g., app configs).
+
+Secret: Stores sensitive information (e.g., passwords, tokens).
+
+38. What is Helm in Kubernetes?
+
+Answer:
+Helm is a package manager for Kubernetes. It uses charts to define, install, and manage Kubernetes applications.
+
+39. What is Horizontal Pod Autoscaler (HPA)?
+
+Answer:
+HPA automatically scales the number of pods in a deployment or replica set based on CPU/memory utilization or custom metrics.
+
+40. What is Vertical Pod Autoscaler (VPA)?
+
+Answer:
+VPA automatically adjusts CPU and memory resource requests/limits of pods based on actual usage.
